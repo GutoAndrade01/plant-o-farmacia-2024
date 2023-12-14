@@ -102,7 +102,7 @@ h1 {
 /* Adiciona uma media query para ajustes específicos em dispositivos móveis */
 @media screen and (max-width: 600px) {
     .farmacia {
-        width: 60%; /* Altera para ocupar 100% da largura da tela em dispositivos móveis */
+        width: 70%; /* Altera para ocupar 100% da largura da tela em dispositivos móveis */
     }
     h1{
         margin-left: 8px;
