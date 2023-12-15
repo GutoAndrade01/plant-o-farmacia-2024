@@ -1,4 +1,4 @@
-body {
+sebody {
     font-family: Arial, sans-serif;
     background-color: rgba(9, 2, 39, 0.699);
     height: 90vh;
@@ -102,7 +102,7 @@ h1 {
 /* Adiciona uma media query para ajustes específicos em dispositivos móveis */
 @media screen and (max-width: 600px) {
     .farmacia {
-        width: 70%; /* Altera para ocupar 100% da largura da tela em dispositivos móveis */
+        width: 85%; /* Altera para ocupar 100% da largura da tela em dispositivos móveis */
     }
     h1{
         width: 80%;
