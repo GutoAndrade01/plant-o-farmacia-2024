@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Adicione mais farmácias conforme necessário
     ];
     // Obtém a data atual no formato "DD/MM/AAAA"
-    const dataAtual = new Date(12/11/2024);
+    const dataAtual = new Date();
     const dia = dataAtual.getDate().toString().padStart(2, '0');
     const mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0');
     const ano = dataAtual.getFullYear();
