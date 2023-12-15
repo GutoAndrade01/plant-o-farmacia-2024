@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Array de farmácias com suas informações
     const farmacias = [
-        { semana: '29/12/2023 a 04/01/2024', farmacia: 'Farma Prata', telefones: ['3727-4775', '99902-5559'] },
+        { semana: '01/12/2023 a 04/01/2024', farmacia: 'Farma Prata', telefones: ['3727-4775', '99902-5559'] },
         { semana: '05/01/2024 a 11/01/2024', farmacia: 'Farmácia Orletti', telefones: ['3727-1442', '99912-0913'] },
         { semana: '12/01/2024 a 18/01/2024', farmacia: 'Farmácia do Adelson', telefones: ['3727-1321', '99897-1321'] },
         { semana: '19/01/2024 a 25/01/2024', farmacia: 'Farmácia Popular', telefones: ['3727-2839', '99824-1143'] },
