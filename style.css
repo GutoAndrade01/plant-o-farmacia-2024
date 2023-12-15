@@ -106,6 +106,7 @@ h1 {
     }
     h1{
         width: 80%;
+        margin-left: 55px;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Array de farmácias com suas informações
     const farmacias = [
-        { semana: '29/12/2023 a 04/01/2024', farmacia: 'Farma Prata', telefones: ['3727-4775','99902-5559'] },
+        { semana: '29/12/2023 a 04/01/2024', farmacia: 'Farma Prata', telefones: ['3727-4775', '99902-5559'] },
         { semana: '05/01/2024 a 11/01/2024', farmacia: 'Farmácia Orletti', telefones: ['3727-1442', '99912-0913'] },
         { semana: '12/01/2024 a 18/01/2024', farmacia: 'Farmácia do Adelson', telefones: ['3727-1321', '99897-1321'] },
         { semana: '19/01/2024 a 25/01/2024', farmacia: 'Farmácia Popular', telefones: ['3727-2839', '99824-1143'] },
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { semana: '29/03/2024 a 04/04/2024', farmacia: 'Farmácia Avenida', telefones: ['3727-2453', '99530-4841'] },
         { semana: '05/04/2024 a 11/04/2024', farmacia: 'Farmácia do Lodi', telefones: ['3727-2315', '99903-3194'] },
         { semana: '12/04/2024 a 18/04/2024', farmacia: 'Drogaria Gozer', telefones: ['3727-2164', '99901-0394'] },
-        { semana: '19/04/2024 a 25/04/2024', farmacia: 'Farmácia do Simão', telefones: ['3727-0052','99947-3746'] },
+        { semana: '19/04/2024 a 25/04/2024', farmacia: 'Farmácia do Simão', telefones: ['3727-0052', '99947-3746'] },
         { semana: '26/04/2024 a 02/05/2024', farmacia: 'Farma Prata', telefones: ['3727-4775', '99902-5559'] },
         { semana: '03/05/2024 a 09/05/2024', farmacia: 'Farmácia Orletti', telefones: ['3727-1442', '99912-0913'] },
         { semana: '10/05/2024 a 16/05/2024', farmacia: 'Farmácia do Adelson', telefones: ['3727-1321', '99897-1321'] },
@@ -118,5 +118,53 @@ document.addEventListener('DOMContentLoaded', function () {
     if (farmaciaAtivaIndex !== -1) {
         const farmaciaAtiva = document.querySelectorAll('.farmacia')[farmaciaAtivaIndex];
         farmaciaAtiva.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center', marginTop: 50 });
+    }
+});
+// Verifica se é um dispositivo móvel
+const isMobile = window.innerWidth <= 767; // Adapte conforme necessário
+
+// Adiciona evento de clique às farmácias
+const farmaciasDivs = document.querySelectorAll('.farmacia');
+farmaciasDivs.forEach((farmaciaDiv, index) => {
+    farmaciaDiv.addEventListener('click', function () {
+        if (isMobile) {
+            // Abre o modal apenas em dispositivos móveis
+            openModal(index);
+        } else {
+            // Em desktop, realiza a ação diretamente (pode ser redirecionamento para uma página de contato)
+            // Neste exemplo, abre um alert
+            alert('Ação direta em desktop');
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Função para abrir o modal
+    function openModal(index) {
+        const modal = document.getElementById('myModal');
+        const ligarBtn = document.getElementById('ligarBtn');
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const farmacia = farmacias[index];
+
+        // Adiciona ação de ligar
+        ligarBtn.addEventListener('click', function () {
+            const telefone = farmacia.telefones[0]; // Assume que o primeiro telefone é o principal
+            window.location.href = `tel:${telefone}`;
+        });
+
+        // Adiciona ação do WhatsApp
+        whatsappBtn.addEventListener('click', function () {
+            const telefone = farmacia.telefones[0]; // Assume que o primeiro telefone é o principal
+            window.location.href = `https://api.whatsapp.com/send?phone=${telefone}`;
+        });
+
+        // Adiciona evento para fechar o modal
+        const closeModal = document.querySelector('.close');
+        closeModal.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        // Exibe o modal
+        modal.style.display = 'block';
     }
 });
