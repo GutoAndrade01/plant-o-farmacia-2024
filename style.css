@@ -106,5 +106,7 @@ h1 {
     }
     h1{
         width: 80%;
+        display: flex;
+        text-align: center;
     }
 }
