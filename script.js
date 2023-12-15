@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 // Verifica se é um dispositivo móvel
-const isMobile = window.innerWidth <= 767; // Adapte conforme necessário
+const isMobile = window.innerWidth <= 500; // Adapte conforme necessário
 
 // Adiciona evento de clique às farmácias
 const farmaciasDivs = document.querySelectorAll('.farmacia');
