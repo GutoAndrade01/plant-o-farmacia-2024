@@ -106,10 +106,14 @@ h1 {
     }
     h1{
         width: 80%;
-        margin-left: 50px;
+        margin-left: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
+
+   li{
+     margin-left: -45px;
+   }
 }
