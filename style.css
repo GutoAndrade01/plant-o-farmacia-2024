@@ -100,7 +100,7 @@ h1 {
 }
 
 /* Adiciona uma media query para ajustes específicos em dispositivos móveis */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .farmacia {
         width: 85%; /* Altera para ocupar 100% da largura da tela em dispositivos móveis */
     }
