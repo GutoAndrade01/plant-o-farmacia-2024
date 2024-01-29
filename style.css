@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(9, 2, 39);
-    height: 100vh;
+    height: 200vh;
     margin: 0;
     overflow: hidden;
 }
@@ -58,13 +58,13 @@ li {
 .titulo {
     display: block;
     position: fixed;
-    background-color: rgba(9, 2, 39, 0);
+    background-color: rgb(9, 2, 39);
     border: none;
-    height: 80px;
+    height: 100px;
     width: 100%;
     overflow: hidden;
     z-index: 1;
-    margin-top: -160px;
+    margin-top: -150px;
     margin-left: -8px;
 }
 
@@ -116,5 +116,8 @@ h1 {
     li {
         margin-left: -45px;
         margin-top: 10px;
+    }
+    .titulo{
+        height: 110px;
     }
 }
