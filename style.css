@@ -62,12 +62,12 @@ li {
     position: fixed;
     background-color: rgba(9, 2, 39, 0);
     border: none;
-    height: 80px;
+    height: 100px;
     width: 100%;
     overflow: hidden;
     z-index: 1;
-    margin-top: -320px;
-    margin-left: -8px;
+    margin-top: -310px;
+    margin-left: -12px;
 }
 
 .farmacia-ativa {
@@ -119,7 +119,5 @@ h1 {
      margin-left: -45px;
      margin-top: 10px;
    }
-   #famacia-list{
-    margin-top: 300px;
-   }
+   
 }
